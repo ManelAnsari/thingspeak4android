@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_channel"
+        android:inputType="textCapWords"
+        android:key="default_channel"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_channel_display_name" />
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_time"
+        android:inputType="textCapWords"
+        android:key="your_time"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_channel_display_time" />
+
+   <!-- <MultiSelectListPreference
+        android:defaultValue="-1"
+        android:entries="@array/pref_fields_titles"
+        android:entryValues="@array/pref_fields_values"
+        android:key="fields_selected"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_fields_title" />-->
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code.
+    0 Always
+    1 Only Wifi
+    2 Only Data -->
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_connection_list_titles"
+        android:entryValues="@array/pref_connection_list_values"
+        android:key="connection_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_connection" />
+
+</PreferenceScreen>
